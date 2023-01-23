@@ -1,0 +1,31 @@
+<div class="centered-content">
+  <div class="modal-box">
+    <h1 class="title">
+      Create a new item
+    </h1>
+
+<!--    <input #listTitleInput class="input has-background-light is-medium"-->
+<!--           style="margin-bottom: 5rem; margin-top: 5rem"-->
+<!--           type="text" placeholder="Enter item description">-->
+<!--    <br><br>-->
+    <form class="example-form" style="margin-bottom: 5rem; margin-top: 5rem">
+      <mat-form-field class="example-full-width">
+        <mat-label>Item description</mat-label>
+        <input #listItemInput type="email" matInput [formControl]="emailFormControl" placeholder="Ex. this is an item">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid description
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Description is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <div class="buttons is-m">
+      <button mat-raised-button routerLink="/" style="margin-right: 2rem">Cancel</button>
+      <button mat-raised-button class="button is-primary has-text-white is-medium"
+              (click)="createList(listItemInput.value)">Create</button>
+    </div>
+
+    <!--    (click)="createList(listTitleInput.value)-->
+  </div>
+</div>

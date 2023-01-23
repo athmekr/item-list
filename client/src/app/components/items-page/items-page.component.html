@@ -1,1 +1,22 @@
-<p>items-page works!</p>
+<div class="centered-content">
+  <div class="modal-box">
+    <div class="sidebar has-background-white">
+      <h1 class="title has-text-primary" style="margin-bottom: 5rem">
+        List of Items
+      </h1>
+
+      <div class="list-menu">
+        <a class="list-menu-item" *ngFor="let item of items">
+          <div>
+<!--            <mat-icon>list</mat-icon>-->
+            <p>{{ item.description }}</p>
+          </div>
+        </a>
+
+      </div>
+
+      <button mat-raised-button routerLink="/create-item" style="margin-top: 5rem" class="right-content">New item</button>
+
+    </div>
+  </div>
+</div>
