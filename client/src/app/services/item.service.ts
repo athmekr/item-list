@@ -9,7 +9,10 @@ export class ItemService {
   readonly ROOT_URL;
 
   constructor(private httpClient: HttpClient) {
-    this.ROOT_URL = 'http://localhost:8000';
+    // this.ROOT_URL = 'http://localhost:8000';
+    // Added the bellow in order to deploy it in AWS.
+    this.ROOT_URL = '/api/';
+
   }
 
   getItems() {
