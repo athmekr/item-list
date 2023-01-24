@@ -17,11 +17,11 @@ export class ItemService {
   }
 
   createItem(description: string) {
-    this.validateItem(description);
     return this.httpClient.post<Item>(`${this.ROOT_URL}/item`, { description });
   }
 
-  validateItem(description: string){
-
+  sanitizeItem(description: string){
+      let lt = /</g, gt = />/g, ap = /'/g, ic = /"/g;
+      return description.toString().replace(lt, "&lt;").replace(gt, "&gt;").replace(ap, "&#39;").replace(ic, "&#34;");
   }
 }
