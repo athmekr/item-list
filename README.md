@@ -13,10 +13,6 @@ You can create new "items" which you can use as your daily todo list!
 
 The project is still under construction. 
 
-The first version is deployed in AWS: 
-http://ec2-54-224-45-237.compute-1.amazonaws.com/
-
-
 ## Pending development: 
 - Edit/update items/tasks
 - Delete tasks
