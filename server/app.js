@@ -5,8 +5,7 @@ const bodyParser = require('body-parser')
 const port = process.env.SERVER_PORT || 8000;
 const mongoose = require('mongoose');
 
-const mongoURL = 'mongodb+srv://thanos:PaxwuRF3kyMrV9qs@cluster0.lhfudmt.mongodb.net/?retryWrites=true&w=majority';
-// const mongoURL = process.env.MONGO_URL;
+const mongoURL = process.env.MONGO_URL;
 
 //Due to deprecation warning
 mongoose.set('strictQuery', false);
